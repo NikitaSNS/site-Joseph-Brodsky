@@ -1,3 +1,6 @@
+// https://habrahabr.ru/post/350886/
+// https://github.com/Harrix/static-site-webpack-habrahabr
+
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -12,8 +15,8 @@ function generateHtmlPlugins(templateDir) {
         const extension = parts[1];
         return new HtmlWebpackPlugin({
             filename: `${name}.html`,
-            template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-            inject: false,
+            template: path.resolve(__dirname, `${templateDir}/${name}.pug`),
+            inject: true,
         })
     })
 }
@@ -39,34 +42,34 @@ module.exports = {
                     presets: 'env'
                 }
             }
-        },
-            {
-                test: /\.(sass|scss)$/,
-                include: path.resolve(__dirname, 'src/scss'),
-                use: ExtractTextPlugin.extract({
-                    use: [{
-                        loader: "css-loader",
+        }, {
+            test: /\.pug$/,
+            loaders: ['pug-loader'],
+        }, {
+            test: /\.(sass|scss)$/,
+            include: path.resolve(__dirname, 'src/scss'),
+            use: ExtractTextPlugin.extract({
+                use: [{
+                    loader: "css-loader",
+                    options: {
+                        sourceMap: true,
+                        minimize: true,
+                        url: false
+                    }
+                },
+                    {
+                        loader: "sass-loader",
                         options: {
-                            sourceMap: true,
-                            minimize: true,
-                            url: false
+                            sourceMap: true
                         }
-                    },
-                        {
-                            loader: "sass-loader",
-                            options: {
-                                sourceMap: true
-                            }
-                        }
-                    ]
-                })
-            },
-            {
-                test: /\.html$/,
-                include: path.resolve(__dirname, 'src/html/includes'),
-                use: ['raw-loader']
-            },
-        ]
+                    }
+                ]
+            })
+        }, {
+            test: /\.html$/,
+            include: path.resolve(__dirname, 'src/html/includes'),
+            use: ['raw-loader']
+        }]
     },
     plugins: [
         new ExtractTextPlugin({
