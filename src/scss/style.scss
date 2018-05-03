@@ -1,1 +1,55 @@
 @import "~bootstrap/scss/bootstrap";
+
+.col-md-1 {
+  background-color: #afa;
+
+  &:nth-child(2n){
+    background-color: #faa;
+  }
+}
+
+.carousel {
+  height: 100%;
+
+  & img {
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .carousel-caption {
+    padding-bottom: 2em;
+
+    &__title {
+      font-size: 4em;
+    }
+
+    &__description {
+      font-size: 2em;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.biography {
+  background-image: url('/img/SliderImage2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 10em;
+
+  color: #fff;
+}
+
+
+.header {
+  background-color: #402d13b8;
+  color: white;
+
+  a {
+    color: white;
+  }
+}
