@@ -15,7 +15,7 @@ function generateHtmlPlugins(templateDir) {
         const extension = parts[1];
         return new HtmlWebpackPlugin({
             filename: `${name}.html`,
-            template: path.resolve(__dirname, `${templateDir}/${name}.pug`),
+            template: path.resolve(__dirname, `${templateDir}/${name}.html`),
             inject: true,
         })
     })
