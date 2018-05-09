@@ -15,7 +15,7 @@
         <a href="/poems.html" class="p-2">Произведения</a>
         <a href="/list_jb.html" class="p-2">Список Бродского</a>
     </nav>
-    <a href="#" class="btn btn-outline-light header__contact-us">Связаться с нами</a>
+    <button class="btn btn-outline-light header__contact-us" data-toggle="modal" data-target="#exampleModalCenter">Связаться с нами</button>
 </div>
 <div class="about-page-section about-page-section--biography">
     <div class="col-md-5 mx-auto text-center">
@@ -208,20 +208,32 @@
         </p>
     </div>
 </div>
-<form>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted"></small>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Связаться с нами</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="contact-us-form">
+                    <div class="form-group">
+                        <label for="email">Email адрес</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Введите Email адрес">
+                    </div>
+                </form>
+                <h2 class="text-center">Спасибо за подписку</h2>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Подписаться на рассылку</button>
+            </div>
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary">Подписаться на рассылку</button>
-</form>
-<div class="footer">
-    <nav class="my-2 my-md-0 mr-md-3">
-        <a href="/biography.html" class="p-2" link="#fff" vlink="#fff" alink="#fff">Биография</a>
-        <a href="/poems.html" class="p-2" link="#fff" vlink="#fff" alink="#fff">Произведения</a>
-        <a href="/listJB.html" class="p-2" link="#fff" vlink="#fff" alink="#fff">Список Бродского</a>
-    </nav>
 </div>
 </body>
 </html>
