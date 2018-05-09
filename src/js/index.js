@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import popper from 'popper.js';
+import bootstrap from 'bootstrap';
 
 $('#exampleModalCenter h2').hide();
 $('#exampleModalCenter .btn-secondary').click(() => $('#exampleModalCenter').hide());
@@ -11,14 +13,14 @@ $("#contact-us-form").submit(function (event) {
 
     let $inputs = $('#exampleModalCenter').find(".btn-primary, #contact-us-form");
 
-    let serializedData = $form.serialize();
-
     $inputs.hide();
 
+    let data = $('#email').value;
+
     $.ajax({
-        url: "/index.html",
-        type: "get",
-        data: serializedData,
+        url: "/feedback.php",
+        type: "post",
+        data: data,
         success: function (response) {
             $('#exampleModalCenter h2').show();
             console.log(response);
