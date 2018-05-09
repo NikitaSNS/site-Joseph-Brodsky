@@ -25,36 +25,37 @@
   }
 }
 
-
-
-.biography {
-  background-image: url('/img/SliderImage3.jpg');
+.about-page-section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 14.2em;
   color: #fff;
   margin-bottom: 3em;
-}
 
-.poems {
-  background-image: url('/img/SliderImage2.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 14.2em;
-  color: #fff;
-  margin-bottom: 3em;
-}
+  &--biography {
+    background-image: url('/img/SliderImage3.jpg');
+  }
 
-.list {
-  background-image: url('/img/Venice1.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 12.1em;
-  color: #fff;
-  margin-bottom: 1.5em;
+  &--poems {
+    background-image: url('/img/SliderImage2.jpg');
+  }
+
+  &--list {
+    background-image: url('/img/Venice1.jpg');
+    padding: 12.1em;
+    margin-bottom: 1.5em;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-weight: normal;
+    font-size: 3.5rem;
+  }
+
+  &__button {
+
+  }
 }
 
 .container {
@@ -130,5 +131,11 @@
     left: 10%;
     color: #FFF;
     font-size: 4rem;
+  }
+}
+
+.header {
+  &__contact-us {
+
   }
 }
