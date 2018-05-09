@@ -1,6 +1,4 @@
 import $ from 'jquery';
-import popper from 'popper.js';
-import bootstrap from 'bootstrap';
 
 $('#exampleModalCenter h2').hide();
 $('#exampleModalCenter .btn-secondary').click(() => $('#exampleModalCenter').hide());
@@ -15,12 +13,13 @@ $("#contact-us-form").submit(function (event) {
 
     $inputs.hide();
 
-    let data = $('#email').value;
+    let data = $('#email').val();
 
     $.ajax({
         url: "/feedback.php",
-        type: "post",
-        data: data,
+        type: "get",
+        dataType: 'html',
+        data: 'email=' + data,
         success: function (response) {
             $('#exampleModalCenter h2').show();
             console.log(response);
