@@ -8,15 +8,15 @@
     <title>Иосиф Бродский</title>
 </head>
 <body>
-<main>
+<main class="sb">
     <div class="container">
         <div class="subscriptions">
             <h1 class="subscriptions__title">Рассылка</h1>
             <h1 class="subscriptions__title subscriptions__title--success">Подписка успешно оформлена!</h1>
             <form class="subscriptions__container subscriptions__container--subscriptions">
-                <input class="form-control btn-outline-dark subscriptions__input" type="email" id="inputEmail"
+                <input class="form-control subscriptions__input btn-light" type="email" id="inputEmail"
                        placeholder="Email адрес" required="" autofocus="">
-                <button type="submit" class="btn btn-outline-dark subscriptions__button">Получить</button>
+                <button type="submit" class="btn btn-light subscriptions__button">Получить</button>
             </form>
             <div class="subscriptions__container subscriptions__container--social-links">
                 <a class="subscriptions__social_link" href="https://www.instagram.com/brodsky_j/">
@@ -28,6 +28,9 @@
                 <a class="subscriptions__social_link" href="https://twitter.com/brodsky_joseph">
                     <img src="../img/twitter.png" alt="twitter">
                 </a>
+            </div>
+            <div class="subscriptions__container">
+                <button type="submit" class="btn btn-light subscriptions__button" onclick="window.history.back();">Назад</button>
             </div>
         </div>
     </div>

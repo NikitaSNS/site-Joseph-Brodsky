@@ -167,14 +167,14 @@
 //}
 //
 //.subscript {
-//  //background-image: url("../img/219396779.jpg");
-//  //height: 50vh;
-//  //width: 50vw;
-//  //background-position: center;
-//  //background-repeat: no-repeat;
-//  //background-size: cover;
-//  //margin-left: 40%;
-//  //margin-right: 40%;
+  //background-image: url("../img/219396779.jpg");
+  //height: 50vh;
+  //width: 50vw;
+  //background-position: center;
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  //margin-left: 40%;
+  //margin-right: 40%;
 //}
 //
 //.social_networks {
@@ -182,6 +182,10 @@
 //  width: 6em;
 //}
 
+.sb {
+  background: url("../img/Venice3.JPG") no-repeat center;
+  background-size: cover;
+}
 
 .subscriptions {
   text-indent: 0;
@@ -193,7 +197,7 @@
   height: 100vh;
 
   &__title {
-
+    color: white;
   }
 
   &__input {
@@ -206,6 +210,10 @@
     width: 50%;
 
     margin-top: 25px;
+
+    &:last-child {
+      text-align: center;
+    }
 
     &--subscriptions {
       display: flex;
