@@ -7,13 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Иосиф Бродский</title>
 </head>
-<body class="subscript">
-<div class="container">
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-    <a href="https://www.instagram.com/brodsky_j/"><img src="../img/inst.png" alt="instagram" class="social_networks"></a>
-    <a href="https://ru-ru.facebook.com/BrodskyJoseph/"><img src="../img/facebook.png" alt="facebook" class="social_networks"></a>
-    <a href="https://twitter.com/brodsky_joseph"><img src="../img/twitter.png" alt="twitter" class="social_networks"></a>
-</div>
+<body>
+<main>
+    <div class="container">
+        <div class="subscriptions">
+            <h1 class="subscriptions__title">Рассылка</h1>
+            <h1 class="subscriptions__title subscriptions__title--success">Подписка успешно оформлена!</h1>
+            <form class="subscriptions__container subscriptions__container--subscriptions">
+                <input class="form-control btn-outline-dark subscriptions__input" type="email" id="inputEmail"
+                       placeholder="Email адрес" required="" autofocus="">
+                <button type="submit" class="btn btn-outline-dark subscriptions__button">Получить</button>
+            </form>
+            <div class="subscriptions__container subscriptions__container--social-links">
+                <a class="subscriptions__social_link" href="https://www.instagram.com/brodsky_j/">
+                    <img src="../img/inst.png" alt="instagram">
+                </a>
+                <a class="subscriptions__social_link" href="https://ru-ru.facebook.com/BrodskyJoseph/">
+                    <img src="../img/facebook.png" alt="facebook">
+                </a>
+                <a class="subscriptions__social_link" href="https://twitter.com/brodsky_joseph">
+                    <img src="../img/twitter.png" alt="twitter">
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
 
 </body>
 </html>

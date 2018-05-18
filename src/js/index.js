@@ -2,20 +2,15 @@ import $ from 'jquery';
 import popper from 'popper.js';
 import bootstrap from 'bootstrap';
 
-$('#exampleModalCenter h2').hide();
-$('#exampleModalCenter .btn-secondary').click(() => $('#exampleModalCenter').hide());
+$('.subscriptions__title--success').hide();
 
-$("#contact-us-form").submit(function (event) {
+$('form.subscriptions__container').submit(function (event) {
 
     event.preventDefault();
 
     let $form = $(this);
 
-    let $inputs = $('#exampleModalCenter').find(".btn-primary, #contact-us-form");
-
-    $inputs.hide();
-
-    let data = $('#email').val();
+    let data = $('.subscriptions__input').val();
 
     $.ajax({
         url: "/feedback.php",
@@ -23,7 +18,9 @@ $("#contact-us-form").submit(function (event) {
         dataType: 'html',
         data: 'email=' + data,
         success: function (response) {
-            $('#exampleModalCenter h2').show();
+            $('form.subscriptions__container').hide();
+            $('.subscriptions__title').hide();
+            $('.subscriptions__title--success').show();
             console.log(response);
         },
         error: function (response) {
@@ -32,4 +29,3 @@ $("#contact-us-form").submit(function (event) {
 });
 
 
-$('.modal-footer').click(() => $("#contact-us-form").submit());
