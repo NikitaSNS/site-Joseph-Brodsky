@@ -32,6 +32,7 @@
   padding: 14.2em;
   color: #fff;
   margin-bottom: 3em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 
   &--biography {
     background-image: url('../img/SliderImage3.jpg');
@@ -62,6 +63,7 @@
   font-family: Courier New;
   text-indent: 2em;
   text-align: justify;
+
   .img_l {
     float: left;
     margin: 0.5em 1em 0 0;
@@ -91,7 +93,7 @@
 }
 
 .header {
-  background-color: #402d13b8;
+  background-color: rgba(0, 8, 37, 0.86);
   color: white;
 
   a {
@@ -134,8 +136,47 @@
   }
 }
 
-.header {
-  &__contact-us {
+.column {
+  padding-bottom:20px; /*отступ снизу*/
+  width:100%; /*указываем общую ширину блока с колонками*/
+  text-align:left; /*выравнивание текста внутри колонок*/
+  column-count: 3; /*количество колонок, на которое хотим разбить текст*/
+  -moz-column-count: 3; /*для мозилы*/
+  -webkit-column-count: 3; /*для webkit браузеров*/
+  column-gap: 9em; /*отступ между колонками*/
+  -moz-column-gap: 9em;
+  -webkit-column-gap: 12em;
+  column-rule: 1px solid #FFFFFF; /*если требуется по дизайну, разделяем колонки линией*/
+  -moz-column-rule: 1px none #FFFFFF;
+  -webkit-column-rule: 1px none #FFFFFF;
+  font-size: 0.7em ;
+  text-indent: 0px;
+}
 
-  }
+.poem{
+  font-size: 1em ;
+  text-indent: 0px;
+}
+
+/*body{
+  background-color: rgba(0, 8, 31, 0.58);
+}*/
+
+.form-control{
+  margin: 15em 6em 2em 0;
+  width: 50%;
+}
+.subscript{
+  background-image: url("../img/sub.jpg");
+  height: 50vh;
+  width: 50vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+.social_networks{
+  height: 6em;
+  width: 6em;
 }
